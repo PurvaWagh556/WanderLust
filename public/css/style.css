@@ -1,0 +1,355 @@
+/* Body */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.logo {
+  color: #fe424d;
+  height: 2rem;
+  width: 2rem;
+  margin-left: 1.5rem;
+}
+
+.nav-link {
+  color: #222 !important;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: block; 
+  transform: translateY(-10px) scale(0.98);
+  transition: transform 0.25s ease;
+  visibility: hidden;
+}
+
+.dropdown-menu.show {
+  transform: translateY(0) scale(1);
+  visibility: visible;
+}
+
+/* Toggler Button */
+.custom-toggler {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 6px 12px;
+}
+
+/* Footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: rgb(57, 54, 54);
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text {
+  font-weight: 400;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+.add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Edit Page */
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Show Page */
+.show-img {
+  height: 30vh;
+}
+
+.show-card {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Thumbnail */
+.preview-img {
+  width: 300px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Modal background */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  margin-top: 2.5rem;
+
+  width: 45%; 
+  height: 65vh; 
+
+  object-fit: cover; 
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.img-container {
+  position: relative;
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.img-container:hover .hover-text {
+  opacity: 1;
+}
+
+.listing-img {
+  cursor: zoom-in;
+}
+
+.btns {
+  display: flex;
+}
+
+/* Map */
+#map {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgb(201, 192, 192);
+}
+
+/* Filters and Tax-toggle */
+.filters-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.navigation-wrapper {
+  position: relative;
+  flex: 1; 
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.navigation-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.category-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+  width: 100%;
+  padding: 10px 0;
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none; 
+}
+
+.filter {
+  flex: 0 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-width: 90px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+.filter i {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.filter p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.filter:hover, .filter.active {
+  opacity: 1;
+  color: #000;
+  border-bottom: 2px solid black;
+}
+
+.nav-btn {
+  position: absolute;
+  z-index: 10;
+  background: white;
+  border: 1px solid #ebebeb;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left { left: 5px; }
+.right { right: 5px; }
+
+
+.tax-info {
+  display: none;
+}
+
+.tax-toggle {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  height: 3.25rem;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap; 
+  margin-left: 10px;
+}
+
+/* Search Button */
+.btn-search {
+background-color: #fe424d;
+color: #fff;
+border-radius: 25px;
+padding: 0 1rem 0 1rem;
+height: 2.25rem;
+}
+.btn-search:hover {
+  background-color: #fe424d;
+  color: #fff;
+}
+.btn-search i{
+  display: inline;
+  margin-right: 0.5rem;
+}
+.search-inp {
+  border-radius: 25px;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  font-size: 0.9rem;
+  height: 2.4rem;
+}

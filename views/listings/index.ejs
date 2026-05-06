@@ -1,0 +1,146 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <div class="filters-container" id="filtersContainer">
+      <div class="navigation-wrapper">
+        <button class="nav-btn left" onclick="scrollGrid(-300)">&#10094;</button>
+
+        <div id="category-scroll" class="category-scroll">
+          <a href="/listings?category=Trending" class="filter <%= category === 'Trending' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-fire"></i></div>
+            <p>Trending</p>
+          </a>
+
+          <a href="/listings?category=New" class="filter <%= category === 'New' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-magnifying-glass-location"></i></div>
+            <p>New</p>
+          </a>
+
+          <a href="/listings?category=Luxe" class="filter <%= category === 'Luxe' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-gem"></i></div>
+            <p>Luxe</p>
+          </a>
+
+          <a href="/listings?category=Lakefront" class="filter <%= category === 'Lakefront' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-water"></i></div>
+            <p>Lakefront</p>
+          </a>
+
+          <a href="/listings?category=Historical" class="filter <%= category === 'Historical' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-landmark"></i></div>
+            <p>Historical</p>
+          </a>
+
+          <a href="/listings?category=Rooms" class="filter <%= category === 'Rooms' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-bed"></i></div>
+            <p>Rooms</p>
+          </a>
+
+          <a href="/listings?category=Iconic Cities" class="filter <%= category === 'Iconic Cities' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-mountain-city"></i></div>
+            <p>Iconic Cities</p>
+          </a>
+
+          <a href="/listings?category=Mountains" class="filter <%= category === 'Mountains' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-mountain-sun"></i></div>
+            <p>Mountains</p>
+          </a>
+
+          <a href="/listings?category=Castles" class="filter <%= category === 'Castles' ? 'active' : '' %>">
+            <div><i class="fa-brands fa-fort-awesome"></i></div>
+            <p>Castles</p>
+          </a>
+
+          <a href="/listings?category=Amazing Pools" class="filter <%= category === 'Amazing Pools' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Amazing Pools</p>
+          </a>
+
+          <a href="/listings?category=Camping" class="filter <%= category === 'Camping' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-tent-arrow-down-to-line"></i></div>
+            <p>Camping</p>
+          </a>
+
+          <a href="/listings?category=Farms" class="filter <%= category === 'Farms' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-building-wheat"></i></div>
+            <p>Farms</p>
+          </a>
+
+          <a href="/listings?category=Arctic" class="filter <%= category === 'Arctic' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-snowflake"></i></div>
+            <p>Arctic</p>
+          </a>
+
+          <a href="/listings?category=Boats" class="filter <%= category === 'Boats' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-sailboat"></i></div>
+            <p>Boats</p>
+          </a>
+
+          <a href="/listings?category=Domes" class="filter <%= category === 'Domes' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-igloo"></i></div>
+            <p>Domes</p>
+          </a>
+
+          <a href="/listings?category=TreeHouses" class="filter <%= category === 'TreeHouses' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-tree"></i></div>
+            <p>TreeHouses</p>
+          </a>
+
+          <a href="/listings?category=Beach" class="filter <%= category === 'Beach' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <p>Beach</p>
+          </a>
+
+          <a href="/listings?category=Mansions" class="filter <%= category === 'Mansions' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-hotel"></i></div>
+            <p>Mansions</p>
+          </a>
+
+          <a href="/listings?category=Creative Spaces" class="filter <%= category === 'Creative Spaces' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-palette"></i></div>
+            <p>Creative Spaces</p>
+          </a>
+
+          <a href="/listings?category=Skiing" class="filter <%= category === 'Skiing' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-person-skiing"></i></div>
+            <p>Skiing</p>
+          </a>
+
+          <a href="/listings?category=Hiking" class="filter <%= category === 'Hiking' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-person-hiking"></i></div>
+            <p>Hiking</p>
+          </a>
+
+          <a href="/listings?category=Golfing" class="filter <%= category === 'Golfing' ? 'active' : '' %>">
+            <div><i class="fa-solid fa-golf-ball-tee"></i></div>
+            <p>Golfing</p>
+          </a>
+        </div>
+
+        <button class="nav-btn right" onclick="scrollGrid(300)">&#10095;</button>
+      </div>
+    <div class="tax-toggle">
+      <div class="form-check-reverse form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+  <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+</div>
+    </div>
+  </div>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <% for(listing of allListings){ %>
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+  <div class="card col listing-card">
+  <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_img" style="height: 20rem;">
+  <div class="card-img-overlay"></div>
+  <div class="card-body">
+    <p class="card-text">
+      <b><%=listing.title%></b> <br>
+      &#8377; <%=listing.price.toLocaleString("en-IN")%> / night
+      <i class="tax-info">&nbsp;&nbsp;+18% GST</i>
+    </p>
+  </div>
+</div>
+</a>
+<% } %>
+  </div>
+  <script src="/js/tax.js"></script>
+</body>
