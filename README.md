@@ -1,10 +1,10 @@
-# WanderLust 🌍
+# WanderLust 
 
 WanderLust is an Airbnb-inspired full-stack travel listing web application that allows users to explore, create, edit, and review travel destinations.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - User Authentication & Authorization
 - Create, Edit, and Delete Listings (CRUD operations)
@@ -17,7 +17,7 @@ WanderLust is an Airbnb-inspired full-stack travel listing web application that 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - HTML
@@ -43,7 +43,7 @@ WanderLust is an Airbnb-inspired full-stack travel listing web application that 
 
 ---
 
-## 📦 Installation
+##  Installation
 
 Clone the repository:
 
@@ -75,7 +75,7 @@ node app.js
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
 This project can be deployed on:
 
@@ -84,13 +84,13 @@ This project can be deployed on:
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 Purva Wagh
 
 ---
 
-## ⭐ Future Improvements
+##  Future Improvements
 
 - ❤️ Wishlist & Favorites Functionality
 - 🔐 Google OAuth Authentication
