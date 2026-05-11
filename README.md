@@ -71,7 +71,7 @@ node app.js
 
 ## 🔗 Live Demo
 
-[Explore WanderLust 👉](https://wanderlust-fcar.onrender.com/listings)
+[👉 Explore WanderLust](https://wanderlust-fcar.onrender.com/listings)
 
 ---
 
